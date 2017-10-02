@@ -9,6 +9,8 @@
 
 .content{
   margin-top:200px;
+  cursor: pointer;
+  
   -webkit-animation-delay: 0s;-webkit-animation-duration: 4.8s;-webkit-animation-iteration-count: 1;-webkit-animation-fill-mode: both;-webkit-animation-name: content-anim;
   -moz-animation-delay: 0s;-moz-animation-duration: 4.8s;-moz-animation-iteration-count: 1;-moz-animation-fill-mode: both;-moz-animation-name: content-anim;
   -ms-animation-delay: 0s;-ms-animation-duration: 4.8s;-ms-animation-iteration-count: 1;-ms-animation-fill-mode: both;-ms-animation-name: content-anim;
