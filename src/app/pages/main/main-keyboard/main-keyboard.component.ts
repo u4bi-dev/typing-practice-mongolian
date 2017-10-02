@@ -17,6 +17,7 @@ export class MainKeyboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.onHint(this.key.count);
 
   }
   
@@ -41,7 +42,8 @@ export class MainKeyboardComponent implements OnInit {
       this.key.count !== this.alphabet.length-1 ? this.key.count++ : this.key.count = 0;
       
       this.bind.emit(this.key);
-      
+      this.onHint(this.key.count);
+
     }
 
   }
@@ -59,5 +61,15 @@ export class MainKeyboardComponent implements OnInit {
   }
   
   @Output() bind = new EventEmitter<Key>();
+
+  onHint(count){
+
+    let element = document.querySelector(`div[data-count="${ count }"]`);
+    element.classList.add('send-hint');
+
+    let tick = (count - 1) >= 0 ? count-1 : this.alphabet.length-1;
+    document.querySelector(`div[data-count="${ tick }"]`).classList.remove('send-hint');
+ 
+  } 
 
 }

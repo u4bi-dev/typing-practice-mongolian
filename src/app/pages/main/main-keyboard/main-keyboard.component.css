@@ -42,5 +42,6 @@
 .sec-func div.dual{line-height:20px;}
 .arrows .key{text-align: center; padding-left: 7px; margin-left:2px;}
 .hidden{visibility: hidden;}
-.send-o { transform:scale(1.1); border-color:green; box-shadow: 0 0 50px green;} 
-.send-x { transform:scale(1.1); border-color:red; box-shadow: 0 0 50px red;}
+.send-o { -webkit-transform:scale(1.1); -moz-transform:scale(1.1); -ms-transform:scale(1.1); transform:scale(1.1); border-color:green; box-shadow: 0 0 50px green;} 
+.send-x { -webkit-transform:scale(1.1); -moz-transform:scale(1.1); -ms-transform:scale(1.1); transform:scale(1.1); border-color:red; box-shadow: 0 0 50px red;}
+.send-hint { -webkit-transform:scale(1.1); -moz-transform:scale(1.1); -ms-transform:scale(1.1); transform:scale(1.03); border-color:blue; box-shadow: 0 0 20px blue;}
