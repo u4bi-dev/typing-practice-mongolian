@@ -7,6 +7,7 @@ import { IntroComponent } from './intro/intro.component';
 import { MainComponent } from './main/main.component';
 import { MainScreenComponent } from './main/main-screen/main-screen.component';
 import { MainKeyboardComponent } from './main/main-keyboard/main-keyboard.component';
+import { ScreenLetterPipe } from './pipes/screen-letter.pipe';
 
 const routes : Routes = [
   {
@@ -30,7 +31,8 @@ const routes : Routes = [
     IntroComponent,
     MainComponent,
     MainScreenComponent,
-    MainKeyboardComponent
+    MainKeyboardComponent,
+    ScreenLetterPipe
   ],
   exports : [
     RouterModule,
