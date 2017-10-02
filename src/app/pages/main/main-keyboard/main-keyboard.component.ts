@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
-import { Key } from '../../models/key.model';
+import { Key } from '../../../models/key.model';
 import { Howl } from 'howler';
 
 @Component({

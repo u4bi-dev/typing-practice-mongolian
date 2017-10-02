@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Key } from '../models/key.model';
-import alphabet from '../mocks/mock-alphabet';
+import { Key } from '../../models/key.model';
+import alphabet from '../../mocks/mock-alphabet';
 
 @Component({
   selector: 'app-main',

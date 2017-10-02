@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { MdButtonModule } from '@angular/material';
 
-import { IntroComponent } from './intro/intro.component';
-import { MainComponent } from './main/main.component';
-import { MainScreenComponent } from './main/main-screen/main-screen.component';
-import { MainKeyboardComponent } from './main/main-keyboard/main-keyboard.component';
+import { IntroComponent } from './pages/intro/intro.component';
+import { MainComponent } from './pages/main/main.component';
+import { MainScreenComponent } from './pages/main/main-screen/main-screen.component';
+import { MainKeyboardComponent } from './pages/main/main-keyboard/main-keyboard.component';
 import { ScreenLetterPipe } from './pipes/screen-letter.pipe';
 
 const routes : Routes = [

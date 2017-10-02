@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Key } from '../../models/key.model';
+import { Key } from '../../../models/key.model';
 
 @Component({
   selector: 'app-main-screen',

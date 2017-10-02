@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoreService } from '../providers/core.service';
+import { CoreService } from '../../providers/core.service';
 
 @Component({
   selector: 'app-intro',
