@@ -5,6 +5,7 @@ import { MdButtonModule } from '@angular/material';
 
 import { IntroComponent } from './intro/intro.component';
 import { MainComponent } from './main/main.component';
+import { MainScreenComponent } from './main/main-screen/main-screen.component';
 import { MainKeyboardComponent } from './main/main-keyboard/main-keyboard.component';
 
 const routes : Routes = [
@@ -28,6 +29,7 @@ const routes : Routes = [
   declarations: [
     IntroComponent,
     MainComponent,
+    MainScreenComponent,
     MainKeyboardComponent
   ],
   exports : [
