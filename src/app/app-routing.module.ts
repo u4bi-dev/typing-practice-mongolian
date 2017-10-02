@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { MdButtonModule } from '@angular/material';
 
 import { IntroComponent } from './intro/intro.component';
 import { MainComponent } from './main/main.component';
@@ -20,14 +21,16 @@ const routes : Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MdButtonModule
   ],
   declarations: [
     IntroComponent,
     MainComponent
   ],
   exports : [
-    RouterModule
+    RouterModule,
+    MdButtonModule
   ]
 })
 export class AppRoutingModule { }
