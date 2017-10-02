@@ -1,2 +1,2 @@
-<app-main-screen></app-main-screen>
-<app-main-keyboard></app-main-keyboard>
+<app-main-screen [alphabet]="alphabet" [key]="key"></app-main-screen>
+<app-main-keyboard [alphabet]="alphabet" [key]="key" (bind)="onAlphabet($event)"></app-main-keyboard>

@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
+import { Key } from '../../models/key.model';
 import { Howl } from 'howler';
 
 @Component({
@@ -8,41 +9,39 @@ import { Howl } from 'howler';
 })
 export class MainKeyboardComponent implements OnInit {
 
-  private textArray : string[];
-  private count : number;
-
+  @Input() alphabet: string[];
+  @Input() key: Key;
+ 
   constructor() {
-
-    let text = 'АБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФХЦЧШЩЪЫЬЭЮЯ';
-    this.textArray = text.split('');
-    this.count = 0;
     
   }
 
   ngOnInit() {
-            
-  }
 
+  }
+  
   @HostListener('document:keydown', ['$event'])
   onKeyDown(ev:KeyboardEvent) {
          
-    let key = document.querySelector(`div[data-key="${ev.keyCode}"]`);
-    if(!key) return;
+    let element = document.querySelector(`div[data-key="${ev.keyCode}"]`);
+    if(!element) return;
 
-    if(key.textContent != this.textArray[this.count]) key.classList.add('send-x');
+    if(element.textContent != this.alphabet[this.key.count]) element.classList.add('send-x');
     else{
-
-      key.classList.add('send-o');
+      
+      element.classList.add('send-o');
       
       let sound = new Howl({
-        src: [`./assets/voice/alphabet/m_${this.count }.mp3`],
+        src: [`./assets/voice/alphabet/m_${this.key.count }.mp3`],
         html5 :true
       });
 
       sound.play();
 
-      this.count !== this.textArray.length-1 ? this.count++ : this.count = 0;
-
+      this.key.count !== this.alphabet.length-1 ? this.key.count++ : this.key.count = 0;
+      
+      this.bind.emit(this.key);
+      
     }
 
   }
@@ -51,12 +50,14 @@ export class MainKeyboardComponent implements OnInit {
   @HostListener('document:keyup', ['$event'])
   onKeyUp(ev:KeyboardEvent) {
          
-    let key = document.querySelector(`div[data-key="${ev.keyCode}"]`);
-    if(!key) return;
+    let element = document.querySelector(`div[data-key="${ev.keyCode}"]`);
+    if(!element) return;
 
-    key.classList.remove('send-o');
-    key.classList.remove('send-x');
+    element.classList.remove('send-o');
+    element.classList.remove('send-x');
 
   }
+  
+  @Output() bind = new EventEmitter<Key>();
 
 }

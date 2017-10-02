@@ -1,7 +1,39 @@
 .wrapper{
+    display: flex;
     width: 80%;
     height: 300px;
     margin:auto;
     margin-bottom: 30px;
-    border: .1px solid #F2F2F2;
+    color : #fff;
+}
+
+.content{
+    display: flex;    
+    width: 100%;
+    height: 50%;
+    align-self : center;
+}
+
+.box{
+    align-self : center;
+    text-align: center;
+    float: left;
+    width: 20%;
+    height: 50%;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.box h1{
+    font-size: 5rem;
+    /*opacity: 0.9;*/
+}
+
+.box h2{
+    font-size: 4rem;
+    opacity: 0.75;
+}
+
+.box h3{
+    font-size: 3rem;
+    opacity: 0.55;
 }
